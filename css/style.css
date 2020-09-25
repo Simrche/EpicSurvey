@@ -36,6 +36,7 @@
     text-decoration: none;
     border: solid 2px white;
     color: white;
+    font-family: "poppins-black";
 }
 
 .headerButton:hover {
@@ -59,6 +60,7 @@
 #indexLink h2 {
     margin: 30px 0 0 20px;
     font-size: 35px;
+    font-family: poppins-black;
 }
 
 .groupe {
@@ -67,10 +69,25 @@
     margin-top: 25px;
 }
 
+.groupe a {
+    text-decoration: none;
+    font-family: poppins;
+    color: #213e4e;
+}
+
 .linkSurvey {
     background-color: white;
-    width: 350px;
+    width: 370px;
     height: 250px;
+}
+
+.linkSurvey img {
+    width: 100%;
+    height: 100%;
+}
+
+.linkSurvey img:hover {
+    opacity: 50%;
 }
 
 .linkSurvey:hover {
@@ -82,6 +99,7 @@
 #classementMini h2 {
     margin: 30px 0 0 20px;
     font-size: 35px;
+    font-family: poppins-black;
 }
 
 #voirClassement {
@@ -89,6 +107,7 @@
     text-decoration: none;
     color: grey;
     margin-left: 20px;
+    font-family: poppins;
 }
 
 #classementGroupe {
@@ -124,6 +143,7 @@
 .lader p {
     font-size: 25px;
     margin-right: 25px;
+    font-family: poppins-black;
 }
 
 /* ------------------- FOOTER ---------------------*/
@@ -132,4 +152,16 @@
     height: 170px;
     margin-top: 25px;
     background-color: #213e4e;
+}
+
+/* ------------------- FONT ---------------------*/
+
+@font-face {
+    font-family: "poppins-black";
+    src: url("../font/Poppins-Black.ttf");
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url("../font/Poppins-Regular.ttf");
 }
