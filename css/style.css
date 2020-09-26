@@ -3,9 +3,18 @@
     padding: 0;
 }
 
-#bodyIndex {
+#body {
     background-color: #e6e6e6;
 }
+
+footer {
+    height: 170px;
+    margin-top: 25px;
+    background-color: #213e4e;
+}
+
+/* ----------------------------------------------------------------------------------- INDEX --------------------------------------------------------------------------------------------*/
+
 
 /* ------------------- HEADER ---------------------*/
 
@@ -147,12 +156,54 @@
     font-family: poppins-black;
 }
 
-/* ------------------- FOOTER ---------------------*/
+/* ----------------------------------------------------------------------------------- PAGE SONDAGE --------------------------------------------------------------------------------------------*/
 
-#indexFooter {
-    height: 170px;
-    margin-top: 25px;
-    background-color: #213e4e;
+#sondage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sondage h1 {
+    font-family: poppins-black;
+    font-size: 35px;
+}
+
+#sondage h2 {
+    font-family: poppins;
+    margin-top: 20px;
+}
+
+#sondage a {
+    align-self: flex-start;
+    margin-left: 25px;
+    font-family: poppins;
+    text-decoration: none;
+    color: #213e4e;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#sondage a img {
+    margin-left: 5px;
+}
+
+.reponses {
+    background-color: white;
+    width: 80%;
+    border: solid 1px black;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    font-family: poppins;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.reponses p {
+    margin-left: 15px;
 }
 
 /* ------------------- FONT ---------------------*/
