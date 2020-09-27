@@ -198,8 +198,14 @@ footer {
     align-items: center;
     margin-top: 15px;
     font-family: poppins;
+    font-size: 15px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.reponses:hover {
+    background-color: #213e4e;
+    color: white;
 }
 
 .reponses p {
