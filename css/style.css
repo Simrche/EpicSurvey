@@ -9,9 +9,37 @@
 
 footer {
     height: 170px;
-    margin-top: 25px;
+    margin-top: 40px;
     background-color: #213e4e;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
+
+.footerInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-family: poppins;
+}
+
+.footerInfo h3 {
+    margin-bottom: 20px;
+}
+
+.footerInfo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.footerInfo a img {
+    width: 25px;
+    margin-right: 10px;
+}
+
 
 /* ----------------------------------------------------------------------------------- INDEX --------------------------------------------------------------------------------------------*/
 
@@ -67,7 +95,7 @@ footer {
 
 /* ------------------- SECTION LIEN ---------------------*/
 
-#indexLink h2 {
+.indexLink h2 {
     margin: 30px 0 0 20px;
     font-size: 35px;
     font-family: poppins-black;
@@ -210,6 +238,65 @@ footer {
 
 .reponses p {
     margin-left: 15px;
+}
+
+/* ----------------------------------------------------------------------------------- CLASSEMENT --------------------------------------------------------------------------------------------*/
+
+#pageClassement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pageClassement h1 {
+    font-family: poppins-black;
+    font-size: 40px;
+    margin-top: 25px;
+}
+
+#pageClassement a {
+    width: 80%;
+    height: 60px;
+    background-color: white;
+    border: solid 1px black;margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    font-family: poppins-black;
+    color: #213e4e;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+#pageClassement a img {
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+#pageClassement a p {
+    margin-right: 20px;
+}
+
+.ordre {
+    display: flex;
+    align-items: center;
+}
+
+.ordre p {
+    margin-left: 20px;
+}
+
+#numeroPage {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+#numeroPage a {
+    margin: 0 10px;
+    font-family: poppins;
 }
 
 /* ------------------- FONT ---------------------*/
