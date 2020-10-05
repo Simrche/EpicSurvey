@@ -30,28 +30,28 @@ const Sondage = {
             {choix : "Bleu", isRight : false},
         ]},
 
-        {titre : "est ce que les rouge vont gagner la prochaine épreuve ?",
+        {titre : "Qui est le présentateur de Koh-Lanta ?",
         reponse : [
-            {choix : "1", isRight : false},
-            {choix : "2", isRight : false},
-            {choix : "3", isRight : true},
-            {choix : "4", isRight : false},
+            {choix : "Jean-luc Reichmann", isRight : false},
+            {choix : "Nicos Aliagas", isRight : false},
+            {choix : "Denis Brogniart", isRight : true},
+            {choix : "Harry Roselmack", isRight : false},
         ]},
 
-        {titre : "est ce que les vert vont gagner la prochaine épreuve ?",
+        {titre : "Ou se passe la saison actuelle de Koh-Lanta ?",
         reponse : [
-            {choix : "1", isRight : false},
-            {choix : "2", isRight : true},
-            {choix : "3", isRight : false},
-            {choix : "4", isRight : false},
+            {choix : "Malaisie", isRight : false},
+            {choix : "Iles Fidji", isRight : true},
+            {choix : "Nouvelle Zelande", isRight : false},
+            {choix : "Viet Nam", isRight : false},
         ]},
 
-        {titre : "est ce que les jaune vont gagner la prochaine épreuve ?",
+        {titre : "Que gagne le vainqueur de Koh-Lanta ?",
         reponse : [
-            {choix : "1", isRight : false},
-            {choix : "2", isRight : false},
-            {choix : "3", isRight : true},
-            {choix : "4", isRight : false},
+            {choix : "Une voiture", isRight : false},
+            {choix : "De la célébrité", isRight : false},
+            {choix : "100 000€", isRight : true},
+            {choix : "Rien c'est pour le fun", isRight : false},
         ]},
 
     ]
@@ -59,6 +59,7 @@ const Sondage = {
 }
 
 var q = 0
+var goodAns = 0
 
 function changementQuestion () {
 
