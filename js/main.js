@@ -63,9 +63,10 @@ var goodAns = 0
 
 function changementQuestion () {
 
+    var verif = 
+
     if(q === (Sondage.questions.length - 1)) {
         document.location.href="classement.html";
-        console.log(q)
     } else {
     q++;
     titreQuestion.innerHTML = Sondage.questions[q].titre
@@ -89,7 +90,6 @@ $('#envoyerPseudo').click(function(){
         alert('Veuillez entrer un pseudo')
     } else {
         var input = document.getElementById("pseudo").value;
-        console.log(input)
         $("#popup").hide();
         $("#popupFond").hide();
     }
