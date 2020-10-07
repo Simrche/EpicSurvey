@@ -58,15 +58,55 @@ const Sondage = {
 
 }
 
+    var reponseUn = document.getElementById("rep1")
+    var reponseDeux = document.getElementById("rep2")
+    var reponseTrois = document.getElementById("rep3")
+    var reponseQuatre = document.getElementById("rep4")
+
+    reponseUn.addEventListener("click", function(){
+        console.log(q)
+        let verif = Sondage.questions[q].reponse[0].isRight
+        if(verif === true) {
+            goodAns++
+            console.log('bonne reponse = ' + goodAns)
+        }
+    })
+
+    reponseDeux.addEventListener("click", function(){
+        console.log(q)
+        let verif = Sondage.questions[q].reponse[1].isRight
+        if(verif === true) {
+            goodAns++
+            console.log('bonne reponse = ' + goodAns)
+        }
+    })
+
+    reponseTrois.addEventListener("click", function(){
+        console.log(q)
+        var verif = Sondage.questions[q].reponse[2].isRight
+        if(verif === true) {
+            goodAns++
+            console.log('bonne reponse = ' + goodAns)
+        }
+    })
+
+    reponseQuatre.addEventListener("click", function(){
+        console.log(q)
+        var verif = Sondage.questions[q].reponse[3].isRight
+        if(verif === true) {
+            goodAns++
+            console.log('bonne reponse = ' + goodAns)
+        }
+    })
+
+
 var q = 0
 var goodAns = 0
 
 function changementQuestion () {
 
-    var verif = 
-
     if(q === (Sondage.questions.length - 1)) {
-        document.location.href="classement.html";
+        //document.location.href="classement.html";
     } else {
     q++;
     titreQuestion.innerHTML = Sondage.questions[q].titre
@@ -75,6 +115,8 @@ function changementQuestion () {
     rep3.innerHTML = Sondage.questions[q].reponse[2].choix
     rep4.innerHTML = Sondage.questions[q].reponse[3].choix
     }
+
+
 }
 
 titrePage.innerHTML = Sondage.title
