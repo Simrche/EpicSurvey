@@ -1,31 +1,12 @@
-/* Fil rouge :
-
-Un Sondage est un objet qui contient des Questions qui elles même contiennent des Réponses dont une ou plusieurs sont justes.
-
-Au chargement de la page afficher le titre du sondage, la première question et les différentes réponses possibles. Lorsqu’une réponse est validée, on affiche la questions suivante et on comptabilise la bonne ou mauvaise réponse dans une variable JS.
-
-quand le sondage est terminé : Comptabiliser les bonnes réponses et afficher un score de x/y (si série de y questions, par exemple). Calculer un nombre de points obtenus sur 100.
-
-Demande le nom de l’utilisateur à sa connexion via un petit formulaire pop-up (animé) et enregistrer ce nom dans une variable, qu’il faudra afficher dans une des coins de l’écran et sur l’écran final des scores.
-
-
-Sondage = { 
-    title : “Qui va survivre dans GOT ?”,
-    questions : [
-    {questionTitle : “est ce que JS va survivre ?”, answers : [ 
-        { choice : “oui”, isRight : true},
-        { choice : “non” isRight : false}] }
-]};
-*/
 var q = 0 // Variable numero de la question en cours
 var goodAns = 0 // Variable du nombre de bonne reponse
 var pseudo = undefined // Variable pour stocké le pseudo
 $('#popupR').hide(); // cacher les pop-up de fin
 $('#popupFondR').hide(); // cacher les pop-up de fin
-var reponseUn = document.getElementById("rep1") // Bouton 1
-var reponseDeux = document.getElementById("rep2") // Bouton 2
-var reponseTrois = document.getElementById("rep3") // Bouton 3
-var reponseQuatre = document.getElementById("rep4") // Bouton 4
+var reponseUn = document.getElementById("rep1") // Bouton reponse 1
+var reponseDeux = document.getElementById("rep2") // Bouton reponse 2
+var reponseTrois = document.getElementById("rep3") // Bouton reponse 3
+var reponseQuatre = document.getElementById("rep4") // Bouton reponse 4
 var messageFin = document.getElementById("affichResult") // Texte du pop-up de fin
 
 
@@ -71,8 +52,6 @@ const Sondage = {
 
 }
 
-
-
 // VERIFICATION DE BONNE REPONSE
 
 reponseUn.addEventListener("click", function(){ // Event : click sur le bouton choix numero 1
@@ -103,8 +82,6 @@ reponseQuatre.addEventListener("click", function(){ // Event : click sur le bout
     }
 })
 
-
-
 // FONCTION CHANGEMENT DE QUESTION
 
 function changementQuestion () { // Fonction activé quand un bouton est clické
@@ -112,7 +89,7 @@ function changementQuestion () { // Fonction activé quand un bouton est clické
     if(q === (Sondage.questions.length - 1)) { // Verification que ce n'était pas la dernière question
         $('#popupFondR').show("fast");
         $('#popupR').show("fast");
-        messageFin.innerHTML = ("Bravo : " + pseudo + ". Tu as obtenu une note de " + goodAns*25 + "/100 !")
+        messageFin.innerHTML = ("Bravo : <span class='red'>" + pseudo + "</span>. Tu as obtenu une note de <span class='red'>" + goodAns*25 + "</span>/100 !")
     } else { // Si ce n'est pas la fin, afficher la question suivante
     q++; // Ajout de 1 pour passer à la question suivante
     titreQuestion.innerHTML = Sondage.questions[q].titre
@@ -125,18 +102,14 @@ function changementQuestion () { // Fonction activé quand un bouton est clické
 
 }
 
-
-
 // AFFICHAGE PREMIERE QUESTION
 
 titrePage.innerHTML = Sondage.title
 titreQuestion.innerHTML = Sondage.questions[0].titre
-rep1.innerHTML = Sondage.questions[0].reponse[0].choix
-rep2.innerHTML = Sondage.questions[0].reponse[1].choix
-rep3.innerHTML = Sondage.questions[0].reponse[2].choix
-rep4.innerHTML = Sondage.questions[0].reponse[3].choix
-
-
+rep1.innerHTML = Sondage.questions[q].reponse[0].choix
+rep2.innerHTML = Sondage.questions[q].reponse[1].choix
+rep3.innerHTML = Sondage.questions[q].reponse[2].choix
+rep4.innerHTML = Sondage.questions[q].reponse[3].choix
 
 // POP-UP (Jquery c'est trop bien)
 
