@@ -26,10 +26,10 @@
             <a href="index.html">Retour à l'accueil <img src="img/fleche.png" alt="fleche retour" width="15px"></a>
             <h2 id="titreQuestion">De quel équipe va être le vainqueur de Koh Lanta 2020 ?</h2>
             <div id="changement">
-                <button class="reponses" onclick="changementQuestion()"><p id="rep1">1. Vert</p></button>
-                <button class="reponses" onclick="changementQuestion()"><p id="rep2">2. Bleu</p></button>
-                <button class="reponses" onclick="changementQuestion()"><p id="rep3">3. Violet</p></button>
-                <button class="reponses" onclick="changementQuestion()"><p id="rep4"> 4. Orange</p></button>
+                <div onclick="changementQuestion()"><button class="reponses" id="rep1"><p>1. Vert</p></button></div>
+                <div onclick="changementQuestion()"><button class="reponses" id="rep2"><p>2. Bleu</p></button></div>
+                <div onclick="changementQuestion()"><button class="reponses" id="rep3"><p>3. Violet</p></button></div>
+                <div onclick="changementQuestion()"><button class="reponses" id="rep4"><p>4. Orange</p></button></div>
             </div>
         </section>
 
@@ -67,6 +67,14 @@
             <div id="popup">
                 <input type="text" placeholder="Entrez votre pseudo" id="pseudo">
                 <input type="submit" id="envoyerPseudo">
+            </div>
+            
+            <div id="popupFondR">
+
+            </div>
+            <div id="popupR">
+                <h2 id="affichResult"></h2>
+                <a href="index.html">Retourner à l'accueil</a>
             </div>
 
             <script src="js/jquery-3.4.1.js"></script>
